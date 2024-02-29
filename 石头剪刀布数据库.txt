@@ -1,0 +1,6 @@
+create database sun;
+#create table user(username varchar(16) not null, password char(32) not null, ip tinyint not null, primary key (username))CHARSET=gbk;
+create table user(username varchar(16) not null, password char(32) not null, ip varchar(15) not null, primary key (username))CHARSET=gbk;
+create user 'sun'@'%' identified by 'sun';
+grant insert,delete,update,select on sun.* to 'RSP'@'%';
+flush privileges;
